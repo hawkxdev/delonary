@@ -6,6 +6,6 @@ ERPNext is the selected foundation. The project is at the design stage; there is
 
 The intended workflow combines project links, tasks and deadlines, automatic resource measurements, template-based DOCX and PDF documents, and read/write access for AI agents through MCP. Client communication stays in existing channels.
 
-Start with the [project model](.agents/skills/project-guide/references/project-model.md) for the intended concepts and technical questions. See [CONTRIBUTING.md](CONTRIBUTING.md) for proposing changes and [AGENTS.md](AGENTS.md) for working instructions.
+Read the [roadmap](docs/ROADMAP.md) for the proposed development stages and the [project model](.agents/skills/project-guide/references/project-model.md) for the intended concepts and technical questions. See [CONTRIBUTING.md](CONTRIBUTING.md) for proposing changes and [AGENTS.md](AGENTS.md) for working instructions.
 
-Delonary's license is not selected. ERPNext and other third-party components retain their own licenses; this repository grants no additional rights to them.
+Delonary is licensed under the [GNU General Public License v3.0 only](LICENSE) (`GPL-3.0-only`). Third-party components, including ERPNext and Frappe Framework, retain their own licenses.
