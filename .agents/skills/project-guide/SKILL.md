@@ -23,7 +23,7 @@ Read [references/kb-index.md](references/kb-index.md), then the project model be
 
 Keep project resource navigation separate from operational tasks, resource coverage separate from a numeric cost, and delivery acceptance separate from payment. The project model owns these distinctions and the unresolved integration questions.
 
-ERPNext is the selected foundation. A separate Frappe application is an extension proposal, not an implemented architecture. Evaluate a requested adaptation against an exact compatible release and a reproducible scenario before claiming support. Do not infer DOCX output or unrestricted custom actions from PDF printing or the presence of an MCP endpoint.
+ERPNext is the selected foundation. Read the [accepted delivery boundary](../../../docs/adr/0001-replaceable-erpnext-foundation.md) before choosing packaging or an extension mechanism. Delonary owns its extensions, shared configuration and deployment definitions; the selected foundation can use upstream sources or separate forks. This boundary is accepted but not implemented. Evaluate each adaptation against the actual requirement, compatible release and reproducible scenario. Do not infer DOCX output or unrestricted custom actions from PDF printing or the presence of an MCP endpoint.
 
 ## Knowledge upkeep
 

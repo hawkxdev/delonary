@@ -4,7 +4,7 @@ Read [.agents/skills/project-guide/SKILL.md](.agents/skills/project-guide/SKILL.
 
 ## Scope and structure
 
-Delonary is in design, with ERPNext selected as its foundation. Runtime versions, installation and the extension architecture still need a concrete task and verification. Do not infer Django conventions from the use of Python.
+Delonary is in design, with ERPNext selected as its foundation. Follow the [accepted delivery boundary](docs/adr/0001-replaceable-erpnext-foundation.md): own extensions, shared configuration and deployment definitions in Delonary, with explicit dependencies that can use upstream sources or selected forks. Product packaging, build inputs and installation still need assigned implementation and verification. Do not infer Django conventions from the use of Python.
 
 Use `src/` for product sources, `tests/` for product tests, `scripts/` for repository utilities, `docs/specs/<NNN-feature>/` for assigned feature packages and `docs/adr/` for accepted architecture decisions. Populate these roles only with useful assigned content. Frappe application packaging must be designed before adding source files.
 
@@ -19,3 +19,9 @@ Review new files as well as diffs. Run `git diff --check` for tracked changes an
 Use local execution for checks and builds. Do not add or trigger GitHub Actions. Installing ERPNext, starting services, changing production or publishing requires task authority for that action.
 
 Every commit requires the owner's explicit approval of the prepared changes. The first commit message is exactly `chore: initialize project`. Publication requires separate authority. For an owned public repository, changes use pull requests and the human owner performs the final merge; do not force push or delete branches. Server protection must be verified when a destination exists.
+
+## Shared settings utility
+
+Read [the operator guide](docs/operations/shared-settings.md) before changing or running scripts/apply_settings.py. The profile is configuration data, not a database export. Run native write checks only on an authorised disposable site; an operational site requires its actual application authority. Preserve normal permissions and controller behavior.
+
+Repository checks are python3 -m unittest discover -s tests -v, ruff check scripts tests, ruff format --check scripts tests, and mypy, using pyproject.toml. The Frappe runtime is provided by the selected Bench environment, not installed by these checks. A type checker can run with a separate compatible development Python; it does not select the site's runtime.

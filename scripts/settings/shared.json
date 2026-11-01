@@ -1,0 +1,6 @@
+{
+  "doctype": "System Settings",
+  "values": {
+    "disable_product_suggestion": 1
+  }
+}
