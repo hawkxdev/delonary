@@ -1,10 +1,14 @@
 # Delonary
 
-Delonary is a planned self-hosted workspace for freelance projects: find every project resource, manage the next action, generate documents, and understand delivery costs and profit.
+Delonary is a planned self-hosted workspace for freelance projects: find project resources, manage the next action, and understand delivery costs and profit.
 
 ERPNext is the selected foundation. The project is at the design stage; there is no installable Delonary application yet.
 
-The intended workflow combines project links, tasks and deadlines, automatic resource measurements, template-based DOCX and PDF documents, and read/write access for AI agents through MCP. Client communication stays in existing channels.
+The [accepted delivery model](docs/adr/0001-replaceable-erpnext-foundation.md) keeps Delonary's extensions, shared configuration and reproducible deployment in this repository. ERPNext and Frappe are external dependencies whose selected sources may be upstream releases or separately maintained forks. A complete installable delivery is not implemented yet.
+
+The first [shared settings utility](docs/operations/shared-settings.md) checks and applies a reviewed configuration profile in an existing Bench environment. Its initial setting disables native product suggestions; application packaging and full deployment remain separate work.
+
+The immediate priority is hands-on use of stock ERPNext before choosing substantial adaptations. Project-resource navigation, work management, project economics and useful agent access guide later changes. DOCX/PDF generation and automatic cost collection are deferred to future stages. Client communication stays in existing channels.
 
 Read the [roadmap](docs/ROADMAP.md) for the proposed development stages and the [project model](.agents/skills/project-guide/references/project-model.md) for the intended concepts and technical questions. See [CONTRIBUTING.md](CONTRIBUTING.md) for proposing changes and [AGENTS.md](AGENTS.md) for working instructions.
 
