@@ -10,7 +10,7 @@ quote-style = "single"
 docstring-code-format = true
 
 [tool.mypy]
-files = ["scripts/apply_settings.py", "tests/test_settings_profile.py"]
+files = ["scripts", "tests"]
 python_version = "3.11"
 warn_return_any = true
 warn_unused_configs = true
