@@ -8,6 +8,10 @@ A project resource is a location of relevant material: source repository, projec
 
 Client communication remains in its existing channels. Relating correspondence and recording agreements do not imply an automatic inbox, message import or permission to send a message. Client login and a customer portal are outside the selected initial scope.
 
+The Lead itself has an independent editable [work title](../../../../docs/operations/lead-title.md). Its default list displays that title first and the person's name second; the work title is not generated from person identity. Existing records require an explicit work name rather than an automatic name-derived backfill.
+
+Opportunity remains a separate native entity for potential engagements with a [reviewed title/contact list](../../../../docs/operations/opportunity-list.md). One contact may have several opportunities, and a named opportunity does not establish an accepted order. Opportunity use requires an explicitly selected operating Company. Moving to that entity does not replace the Lead title requirement.
+
 ## Resource measurements and project economics
 
 Project economics remains a product goal, but automatic collection of owner time, agent time, weighted token usage and additional attributable expenses is deferred. The immediate work uses stock ERPNext and observes its native inputs and reports before choosing adaptations. A future collector must retain source identity, project attribution, units, covered period and coverage limits. Missing measurements remain unknown; a partial cost total cannot establish complete project profit.

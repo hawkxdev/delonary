@@ -2,8 +2,8 @@
 name: project-guide
 description: >
   Explain Delonary project concepts and technical boundaries. WHEN: Delonary architecture,
-  project resources, cost inputs, document generation, Делонари, устройство проекта,
-  изучи проект, изучай проект. WHEN NOT: private coordination or generic ERPNext administration.
+  project resources, cost inputs, document generation, project structure and project study.
+  WHEN NOT: private coordination or generic ERPNext administration.
 allowed-tools: [Read, Grep, Glob, Bash]
 ---
 

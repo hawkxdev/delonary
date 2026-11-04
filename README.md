@@ -6,7 +6,7 @@ Delonary is an early-stage project for a self-hosted freelance workspace on [ERP
 
 ## Available now
 
-The repository provides a small utility for versioned checkbox settings in Frappe. Keep a reviewed preference in Git, check a site's configuration for differences, and explicitly apply the profile through normal Frappe permissions and validation. The included [profile](scripts/settings/shared.json) disables native product suggestions.
+The repository provides explicit check/apply utilities for reviewed Frappe configuration. The [shared settings profile](scripts/settings/shared.json) disables native product suggestions. The [Lead profile](scripts/settings/lead-list.json) adds an editable work title independent of the person's name. The [Opportunity profile](scripts/settings/opportunity-list.json) configures its native work title and contact. Both list profiles show project names first and contacts second, with reviewed column widths.
 
 The complete Delonary workspace is not packaged for installation yet. Development starts with real use of stock ERPNext and adds adaptations for observed needs.
 
@@ -16,6 +16,8 @@ The complete Delonary workspace is not packaged for installation yet. Developmen
 - Python 3.11 or newer for repository development and unit tests.
 - An existing configured Bench site to use the settings utility. Native checks cover Frappe 16.54.0; the Bench interpreter must satisfy the installed Frappe release's own requirements.
 - Trusted operator access and a Frappe user with read permission for checks and write permission for applying System Settings.
+
+The list utility additionally needs ERPNext and normal customization permissions. Read the [Lead title guide](docs/operations/lead-title.md) for initial custom-field creation and its schema/recovery boundary, or the [Opportunity guide](docs/operations/opportunity-list.md) for presentation-only configuration.
 
 The utility uses Python's standard library and the site's installed Frappe API. Site credentials, database provisioning and schema belong to the existing Bench installation. The development environment below is separate from that runtime.
 
@@ -83,7 +85,11 @@ Unit tests need no running Frappe site. Native integration additionally needs a 
 |---|---|
 | [scripts/apply_settings.py](scripts/apply_settings.py) | Explicit check/apply command |
 | [scripts/settings/shared.json](scripts/settings/shared.json) | Reviewed public settings profile |
+| [scripts/apply_list_view.py](scripts/apply_list_view.py) | Explicit list presentation check/apply command |
+| [scripts/settings/opportunity-list.json](scripts/settings/opportunity-list.json) | Project name and contact column profile |
+| [scripts/settings/lead-list.json](scripts/settings/lead-list.json) | Independent Lead work title and contact profile |
 | [tests/test_settings_profile.py](tests/test_settings_profile.py) | Validation, permission and repeat-operation unit cases |
+| [tests/test_list_profile.py](tests/test_list_profile.py) | List schema, title, visibility and width unit cases |
 | [pyproject.toml](pyproject.toml) | Ruff and mypy configuration |
 
 ## Documentation
@@ -94,6 +100,8 @@ Unit tests need no running Frappe site. Native integration additionally needs a 
 | [Project model](.agents/skills/project-guide/references/project-model.md) | Concepts, intended workflows and evidence limits |
 | [Delivery decision](docs/adr/0001-replaceable-erpnext-foundation.md) | Accepted extension and replaceable-foundation boundary |
 | [Shared settings guide](docs/operations/shared-settings.md) | Runtime prerequisites, operation and recovery |
+| [Opportunity list guide](docs/operations/opportunity-list.md) | Potential engagement names, contacts and repeatable list configuration |
+| [Lead title guide](docs/operations/lead-title.md) | Editable work titles, separate person names and schema preparation |
 | [Shared settings plan](docs/specs/002-shared-settings/plan.md) | Component implementation and acceptance source |
 
 ## Planned workspace

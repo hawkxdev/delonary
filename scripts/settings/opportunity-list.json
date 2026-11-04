@@ -1,0 +1,7 @@
+{
+  "doctype": "Opportunity",
+  "columns": [
+    {"fieldname": "title", "label": "Project Name", "width": 420},
+    {"fieldname": "contact_person", "label": "Contact", "width": 180}
+  ]
+}
